@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Excel 职场减负工具箱｜小白使用指南</title>
+  <style>
+    :root{--g:#107c41;--g2:#eaf7ef;--ink:#17241d;--muted:#607168;--line:#d7e5dc;--bg:#f4f7f5;--blue:#0033cc}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei UI","Segoe UI",sans-serif;line-height:1.75}.hero{padding:58px 24px;background:linear-gradient(130deg,#0c6635,#16a05a);color:#fff}.wrap{max-width:1000px;margin:auto}.hero h1{margin:8px 0;font-size:38px}.hero p{margin:0;opacity:.9;font-size:17px}main{max-width:1000px;margin:-24px auto 50px;padding:0 20px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:20px;box-shadow:0 12px 30px rgba(20,70,40,.07)}h2{margin:0 0 15px}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.action{display:block;text-decoration:none;border-radius:13px;padding:17px;background:var(--g2);color:var(--g);font-weight:800;text-align:center}.steps{counter-reset:s;display:grid;gap:13px}.step{position:relative;border:1px solid var(--line);border-radius:13px;padding:16px 16px 16px 64px}.step:before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:17px;background:var(--g);color:#fff;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800}.step strong{display:block}.note{border-left:5px solid var(--g);background:var(--g2);padding:13px 16px;border-radius:8px}code{background:#eef2f0;padding:2px 6px;border-radius:5px}@media(max-width:680px){.actions{grid-template-columns:1fr}.hero h1{font-size:29px}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap"><small>WINDOWS 桌面版 EXCEL</small><h1>Excel 职场减负工具箱</h1><p>安装一次，以后把重复操作交给顶部按钮。</p></div></header>
+  <main>
+    <section class="panel"><h2>选择入口</h2><div class="actions"><a id="download" class="action" href="#">下载最新版</a><a class="action" href="#install">查看安装步骤</a><a class="action" href="community.html">加入交流群 / 提交需求</a></div></section>
+    <section id="install" class="panel"><h2>第一次安装</h2><div class="steps"><div class="step"><strong>下载加载项</strong>从本项目 GitHub Release 下载最新 `.xlam`。</div><div class="step"><strong>打开加载项管理</strong>Excel → 文件 → 选项 → 加载项；底部选择“Excel 加载项”→ 转到。</div><div class="step"><strong>浏览并勾选</strong>选择下载的 `.xlam` 文件并勾选。</div><div class="step"><strong>固定到顶部</strong>打开“加载项”选项卡，右键“一键格式化”→ 添加到快速访问工具栏。</div></div></section>
+    <section class="panel"><h2>每天怎么用</h2><div class="steps"><div class="step"><strong>选中文本框边框</strong>按住 Ctrl 可以选择多个文本框。</div><div class="step"><strong>点击“一键格式化”</strong>字号、粗体、字体颜色和填充颜色立即统一。</div><div class="step"><strong>需要调整时打开“格式设置”</strong>输入颜色如 <code>#0033CC</code>，保存后跨工作簿继续使用。</div></div><p class="note">加载项不会改变文本框内容、位置、大小和边框，也不会上传工作簿数据。</p></section>
+    <section class="panel"><h2>遇到宏被阻止</h2><p>不要开启“启用所有宏”。确认文件来自本项目官方 Release 且校验值一致后，可以右键文件 → 属性 → 解除锁定。企业环境请联系 IT 管理员。</p></section>
+  </main>
+  <script>
+    (()=>{const parts=location.pathname.split('/').filter(Boolean);const owner=location.hostname.endsWith('.github.io')?location.hostname.split('.')[0]:null;const repo=parts[0];const link=document.getElementById('download');if(owner&&repo){link.href=`https://github.com/${owner}/${repo}/releases/latest`;link.textContent='下载最新版';}else{link.href='../outputs/';link.textContent='本地预览：打开交付目录';}})();
+  </script>
+</body>
+</html>

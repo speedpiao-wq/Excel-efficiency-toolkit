@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Excel add-in maker">
+  <rect width="256" height="256" rx="52" fill="#107C41"/>
+  <path d="M40 56h112v144H40z" fill="#0B5D31"/>
+  <path d="M92 56h124v144H92z" fill="#FFFFFF" opacity=".96"/>
+  <path d="M92 96h124M92 136h124M92 176h124M132 56v144M174 56v144" stroke="#B7D8C5" stroke-width="8"/>
+  <path d="M52 88h34l18 30 18-30h34l-34 48 36 52h-35l-20-33-20 33H48l37-52z" fill="#FFFFFF"/>
+  <path d="M184 78l-28 50h24l-12 50 42-62h-26l22-38z" fill="#FFC83D" stroke="#9A6A00" stroke-width="4" stroke-linejoin="round"/>
+</svg>

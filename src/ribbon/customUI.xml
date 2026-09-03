@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns">
+        <group id="TextBoxFormatterGroup" label="文本框效率工具">
+          <button id="FormatSelectedTextBoxesButton"
+                  label="一键格式化"
+                  screentip="统一所选文本框格式"
+                  supertip="使用已保存的设置，统一所选文本框的字号、粗体、字体颜色和填充颜色。"
+                  imageMso="FormatPainter"
+                  size="large"
+                  onAction="FormatSelectedTextBoxesFromRibbon" />
+          <button id="OpenTextBoxFormatSettingsButton"
+                  label="格式设置"
+                  screentip="设置文本框格式"
+                  supertip="设置字号、是否加粗、字体颜色和文本框填充颜色。设置仅保存在当前 Windows 用户中。"
+                  imageMso="FileOptions"
+                  onAction="OpenTextBoxFormatSettingsFromRibbon" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

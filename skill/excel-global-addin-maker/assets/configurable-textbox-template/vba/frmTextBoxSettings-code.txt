@@ -1,0 +1,79 @@
+Option Explicit
+
+Private Sub UserForm_Initialize()
+    txtFontSize.Value = CStr(GetConfiguredFontSize())
+    txtFontColor.Value = GetConfiguredFontHex()
+    txtFillColor.Value = GetConfiguredFillHex()
+    chkBold.Value = GetConfiguredBold()
+    ResetInputColors
+    UpdatePreviews
+End Sub
+
+Private Sub btnSave_Click()
+    Dim parsedColor As Long
+
+    ResetInputColors
+
+    If Not IsValidFontSize(txtFontSize.Value) Then
+        txtFontSize.BackColor = RGB(255, 232, 232)
+        txtFontSize.SetFocus
+        Exit Sub
+    End If
+
+    If Not TryParseHexColor(CStr(txtFontColor.Value), parsedColor) Then
+        txtFontColor.BackColor = RGB(255, 232, 232)
+        txtFontColor.SetFocus
+        Exit Sub
+    End If
+
+    If Not TryParseHexColor(CStr(txtFillColor.Value), parsedColor) Then
+        txtFillColor.BackColor = RGB(255, 232, 232)
+        txtFillColor.SetFocus
+        Exit Sub
+    End If
+
+    SaveFormatterSettings CDbl(txtFontSize.Value), _
+                          CStr(txtFontColor.Value), _
+                          CStr(txtFillColor.Value), _
+                          CBool(chkBold.Value)
+    Unload Me
+End Sub
+
+Private Sub btnReset_Click()
+    txtFontSize.Value = CStr(DefaultFontSize())
+    txtFontColor.Value = DefaultFontHex()
+    txtFillColor.Value = DefaultFillHex()
+    chkBold.Value = DefaultBold()
+    ResetInputColors
+    UpdatePreviews
+End Sub
+
+Private Sub btnCancel_Click()
+    Unload Me
+End Sub
+
+Private Sub txtFontColor_Change()
+    UpdatePreviews
+End Sub
+
+Private Sub txtFillColor_Change()
+    UpdatePreviews
+End Sub
+
+Private Sub UpdatePreviews()
+    Dim parsedColor As Long
+
+    If TryParseHexColor(CStr(txtFontColor.Value), parsedColor) Then
+        lblFontPreview.BackColor = parsedColor
+    End If
+
+    If TryParseHexColor(CStr(txtFillColor.Value), parsedColor) Then
+        lblFillPreview.BackColor = parsedColor
+    End If
+End Sub
+
+Private Sub ResetInputColors()
+    txtFontSize.BackColor = RGB(255, 255, 255)
+    txtFontColor.BackColor = RGB(255, 255, 255)
+    txtFillColor.BackColor = RGB(255, 255, 255)
+End Sub

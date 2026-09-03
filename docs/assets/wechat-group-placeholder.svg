@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="微信群二维码待更新">
+  <rect width="720" height="720" rx="42" fill="#f2f8f4"/>
+  <rect x="52" y="52" width="616" height="616" rx="30" fill="#fff" stroke="#cfe3d6" stroke-width="8"/>
+  <circle cx="360" cy="270" r="96" fill="#107c41" opacity=".12"/>
+  <path d="M305 254h110v78H305zM330 228h60v130h-60z" fill="#107c41"/>
+  <text x="360" y="430" text-anchor="middle" font-family="Microsoft YaHei UI, sans-serif" font-size="42" font-weight="700" fill="#173f29">微信群二维码待更新</text>
+  <text x="360" y="490" text-anchor="middle" font-family="Microsoft YaHei UI, sans-serif" font-size="25" fill="#607368">请通过 GitHub Issues / Discussions 联系</text>
+</svg>

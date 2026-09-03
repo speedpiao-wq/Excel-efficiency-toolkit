@@ -1,0 +1,47 @@
+name: 功能需求
+description: 提交一个真实、重复的 Excel 办公场景
+title: "[需求] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 你在什么工作中遇到这个重复操作？请勿上传敏感业务数据。
+    validations:
+      required: true
+  - type: textarea
+    id: current_steps
+    attributes:
+      label: 目前需要重复执行的步骤
+      placeholder: "1. ……\n2. ……\n3. ……"
+    validations:
+      required: true
+  - type: input
+    id: frequency
+    attributes:
+      label: 使用频率
+      placeholder: 例如：每天约 30 次
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待的一键结果
+    validations:
+      required: true
+  - type: textarea
+    id: preserve
+    attributes:
+      label: 哪些内容绝对不能改变
+      placeholder: 例如：公式、边框、文件名、原始数据
+  - type: dropdown
+    id: sample
+    attributes:
+      label: 是否可以提供脱敏示例
+      options:
+        - 可以提供脱敏截图
+        - 可以提供脱敏文件
+        - 暂时不能提供
+    validations:
+      required: true

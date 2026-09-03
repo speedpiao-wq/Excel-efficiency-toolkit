@@ -1,0 +1,29 @@
+name: Remind maintainers to update WeChat group QR
+
+on:
+  schedule:
+    - cron: "0 1 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check QR expiry
+        id: qr
+        run: python scripts/check_qr_expiry.py
+      - name: Open one maintenance issue when needed
+        if: steps.qr.outputs.needs_reminder == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REASON: ${{ steps.qr.outputs.reason }}
+        run: |
+          count=$(gh issue list --state open --search 'in:title "[维护] 更新微信群二维码"' --json number --jq 'length')
+          if [ "$count" = "0" ]; then
+            gh issue create --title "[维护] 更新微信群二维码" --body "社区入口页中的微信群二维码需要更新。原因：${REASON}\n\n请运行：python scripts/update_wechat_qr.py \"新的群二维码.png\" --valid-until YYYY-MM-DD"
+          fi

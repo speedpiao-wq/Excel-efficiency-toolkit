@@ -1,0 +1,7 @@
+interface:
+  display_name: "Excel 全局加载项生成器"
+  short_description: "用自然语言生成或修改可跨工作簿使用的 Excel 快捷按钮"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#107C41"
+  default_prompt: "使用 $excel-global-addin-maker，把我的重复 Excel 操作制作成可全局使用、可验证的 .xlam 快捷按钮。"
