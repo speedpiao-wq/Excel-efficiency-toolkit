@@ -10,7 +10,7 @@
 2. 阅读 [小白安装与使用指南](https://speedpiao-wq.github.io/Excel-efficiency-toolkit/)。
 3. 在 Excel 的“加载项”选项卡中，将“一键格式化”固定到快速访问工具栏。
 
-> 当前仓库正在准备首次公开发布。Release 下载入口会在 `v0.1.0` 发布后启用。
+> `v0.1.0` 已发布：普通用户可直接下载 [`Excel-textbox-efficiency-tool-v0.1.0.xlam`](https://github.com/speedpiao-wq/Excel-efficiency-toolkit/releases/download/v0.1.0/Excel-textbox-efficiency-tool-v0.1.0.xlam)。
 
 ## 功能
 
@@ -26,7 +26,7 @@
 - [提交功能需求](https://github.com/speedpiao-wq/Excel-efficiency-toolkit/issues/new?template=feature_request.yml)
 - [报告问题](https://github.com/speedpiao-wq/Excel-efficiency-toolkit/issues/new?template=bug_report.yml)
 - [查看 GitHub Discussions](https://github.com/speedpiao-wq/Excel-efficiency-toolkit/discussions)
-- 建议启用 GitHub Discussions，作为永不过期、可检索的公开交流区。
+- GitHub Discussions 是永不过期、可检索的公开交流区，也是微信群二维码失效后的备用入口。
 
 微信群二维码只有短期有效期，因此项目不会把二维码直接写死在加载项或教程中。所有公开材料只链接到稳定社区入口页；维护者只需定期替换入口页中的二维码图片。
 
